@@ -56,11 +56,7 @@ L = qchisq(.975,2) # 7.37775
 2*sun.per$spec[40]/L # 
 2*sun.per$spec[40]/U # 
  plot((soi-mean(soi)))
-
-spaic = spec.ar(sunspotz, log="no") # min AIC spec
-abline(v=frequency(sunspotz)*1/52, lty="dotted") # El Nino Cycle
-(sun.ar = ar(sunspotz, order.max=30)) # estimates and AICs
-
+ 
 plot(1:30, sun.ar$aic[-1], type="o")
 
 n = length(sunspotz)
